@@ -206,8 +206,8 @@ def main():
         port=int(os.environ.get("SD_PORT") or "7860"),
     )
 
-    positive_prompt = " ".join(sd_prompt.positive)
-    negative_prompt = " ".join(sd_prompt.negative)
+    positive_prompt = ", ".join(sd_prompt.positive)
+    negative_prompt = ", ".join(sd_prompt.negative)
     print(f"Positive prompt: {positive_prompt}")
     print(f"Negative prompt: {negative_prompt}")
 
