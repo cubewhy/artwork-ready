@@ -131,6 +131,13 @@ def main():
     print(f"Positive prompt: {positive_prompt}")
     print(f"Negative prompt: {negative_prompt}")
 
+    addition_positive_trait = input("Addition Positive Trait > ")
+    addition_negative_trait = input("Addition Negative Trait > ")
+    positive_prompt += " " + addition_positive_trait
+    negative_prompt += " " + addition_negative_trait
+
+    print("Ok...Sending to SD...")
+
     sd_result = sd_api.txt2img(
         prompt=positive_prompt,
         negative_prompt=negative_prompt,
